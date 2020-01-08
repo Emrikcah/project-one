@@ -1,3 +1,14 @@
+/* custom colors */
+:root{
+    --antiqueWhite: #faf2db;
+    --khaki: #e8de7d;
+    --darkSlateGray: #3b5752;
+    --peru: #c08640;
+    --violet: #f1b9dc;
+    --orange: #ec5329;
+}
+
+
 /* Global Layout Set-up */
 * { 
   box-sizing: border-box;
@@ -9,7 +20,7 @@ body {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #222;
-  background: #f7f5f0;
+  background: var(--antiqueWhite);
 }
 /* Link Styles */
 
@@ -25,7 +36,7 @@ a:hover {
 
 .main-nav {
   width: 100%;
-  background: black;
+  background-color: #0008;
   min-height: 30px;
   padding: 10px;
   position: fixed;
@@ -33,6 +44,7 @@ a:hover {
 }
 .nav {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   font-weight: 700;
   list-style-type: none;
@@ -52,14 +64,15 @@ a:hover {
   transition: all .5s;
 }
 .nav a:hover {
-  color: white
+  color: var(--orange)
 }
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/candyKingdom.png') no-repeat;
+  background-position: 0% 25.4%;
   background-size: cover;
-  overflow: hidden;
+    overflow: hidden;
   padding-top: 60px;
 }
 header {
@@ -86,7 +99,7 @@ header .profile-image:hover {
 } 
 .location {
   background-color: #222;
-  color: yellow;
+  color: var(--khaki);
 }
 .card {
   margin: 30px;
@@ -99,7 +112,7 @@ header .profile-image:hover {
   transition: all .5s;
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: var(--orange);
 }
 
 ul.skills {
@@ -110,14 +123,14 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: var(--orange);
   color: white;
   padding: 5px 10px;
   margin: 2px;
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: var(--darkSlateGray);
 }
 
 footer {
@@ -167,6 +180,11 @@ a.social:hover {
   clear: both;
 }
 
+/* styles for medium and up */
+@media screen and (min-width: 500px){
+    
+}
+
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
   
@@ -180,7 +198,7 @@ a.social:hover {
   }
 
   header {
-    min-height: 470px;
+    min-height: 570px;
   }
 
   .nav {
