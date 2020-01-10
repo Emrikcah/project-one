@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 /* custom colors */
 :root {
     --antiqueWhite: #faf2db;
@@ -11,6 +13,7 @@
 
 /* Global Layout Set-up */
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -65,6 +68,19 @@ a:hover {
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    font-weight: 700;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .nav .name {
@@ -77,6 +93,8 @@ a:hover {
 }
 
 .nav a {
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
@@ -105,10 +123,14 @@ header .profile-image {
     height: 100px;
     border-radius: 50%;
     border: 3px solid white;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
 header .profile-image:hover {
+    -webkit-transform: scale(1.2) rotate(5deg);
+    -ms-transform: scale(1.2) rotate(5deg);
     transform: scale(1.2) rotate(5deg);
 }
 
@@ -135,6 +157,8 @@ header .profile-image:hover {
     background: #fff;
     border-bottom: 4px solid #ccc;
     border-radius: 6px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
@@ -189,6 +213,8 @@ a.social {
     height: 30px;
     background-size: 30px 30px;
     opacity: .4;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
@@ -221,10 +247,13 @@ a.social:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     align-items: center;
 }
 
-#exp ul{
+#exp ul {
     padding-left: 0;
 }
 
@@ -232,14 +261,17 @@ a.social:hover {
     padding: 0.4rem 0;
 }
 
-#exp .exp-inner-text{
+#exp .exp-inner-text {
     text-align: center;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
     order: 2;
 }
 
-#exp .jake-resize{
+#exp .jake-resize {
     width: 100%;
-   
+
 }
 
 /* Experience.html end */
@@ -251,6 +283,9 @@ a.social:hover {
     }
 
     .nav {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
     }
 
@@ -276,6 +311,7 @@ a.social:hover {
     .flex {
         display: -ms-flexbox;
         /* TWEENER - IE 10 */
+        display: -webkit-box;
         display: flex;
         max-width: 1200px;
         -ms-flex-pack: distribute;
@@ -309,6 +345,3 @@ a.social:hover {
 
 }
 
-@media screen and (min-width: 1065px) {
-    header {}
-}
