@@ -23,6 +23,17 @@ body {
     background: var(--antiqueWhite);
 }
 
+.container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
 /* Link Styles */
 
 a {
@@ -201,6 +212,32 @@ a.social:hover {
     clear: both;
 }
 
+/* Experience.html */
+#exp {
+    margin: 2rem 0;
+}
+
+#exp .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+#exp ul{
+    padding-left: 0;
+}
+
+#exp ul li {
+    padding: 0.4rem 0;
+}
+
+#exp .exp-inner-text{
+    text-align: center;
+}
+
+/* Experience.html end */
+
 /* styles for medium and up */
 @media screen and (min-width: 500px) {
     .main-nav {
@@ -240,7 +277,7 @@ a.social:hover {
         margin: 0 auto;
     }
 
-    header{
+    header {
         background-position: 0% 15%;
     }
 
