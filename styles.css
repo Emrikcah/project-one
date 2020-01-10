@@ -234,6 +234,12 @@ a.social:hover {
 
 #exp .exp-inner-text{
     text-align: center;
+    order: 2;
+}
+
+#exp .jake-resize{
+    width: 100%;
+   
 }
 
 /* Experience.html end */
